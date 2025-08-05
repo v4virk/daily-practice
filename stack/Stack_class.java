@@ -1,3 +1,5 @@
+// Stack implementation using linked list
+
 public class Stack_class {
     //node class
     static class Node {
