@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+import java.math.BigInteger;
+
+class Solution {
+    
+    public static BigInteger Fact(int n) {
+        if (n == 0 || n == 1) {
+            return BigInteger.ONE;
+        } else {
+            return BigInteger.valueOf(n).multiply(Fact(n - 1));
+        }
+    }
+
+    public static ArrayList<Integer> factorial(int n) {
+        ArrayList<Integer> li = new ArrayList<>();
+        BigInteger out = Fact(n);
+        String str = out.toString();
+        
+        for (char c : str.toCharArray()) {
+            li.add(c - '0');
+        }
+        
+        return li;
+    }
+}
